@@ -1,5 +1,5 @@
 %define version 2.16.0
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define libgnomecanvas_version 2.6.0
 %define gtkmm_version 2.4.0
