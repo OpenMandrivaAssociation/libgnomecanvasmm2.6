@@ -1,5 +1,5 @@
-%define version 2.16.0
-%define release %mkrel 3
+%define version 2.20.0
+%define release %mkrel 1
 
 %define libgnomecanvas_version 2.6.0
 %define gtkmm_version 2.4.0
@@ -10,6 +10,7 @@
 %define pkgname	libgnomecanvasmm
 %define libname_orig	%mklibname gnomecanvasmm %api_version
 %define libname		%mklibname gnomecanvasmm %api_version %{major}
+%define develname %mklibname -d gnomecanvasmm %api_version
 
 Name:	 	%{pkgname}%{api_version}
 Summary: 	A C++ interface for GNOME 2 canvas library
@@ -44,14 +45,15 @@ subpackage of the gnomemm project.  The interface provides a convenient
 interface for C++ programmers to create GNOME GUIs with GTK+'s flexible
 object-oriented framework.
 
-%package	-n %{libname}-devel
+%package	-n %develname
 Summary:	Headers and development files of GNOME 2 canvas library
 Group:		Development/GNOME and GTK+
 Provides:	%name-devel = %{version}-%{release}
 Provides:	%{pkgname}-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}
+Obsoletes: %mklibname -d gnomecanvasmm %api_version 1
 
-%description	-n %{libname}-devel
+%description	-n %develname
 This package contains the headers and various development files needed
 for compiling or development of applications that wants C++ interface
 of GNOME 2 canvas library.
@@ -90,9 +92,9 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-, root, root)
 %doc COPYING README
-%{_libdir}/*.so.*
+%{_libdir}/libgnomecanvasmm-%{api_version}.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %develname
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog NEWS
 %{_includedir}/*
