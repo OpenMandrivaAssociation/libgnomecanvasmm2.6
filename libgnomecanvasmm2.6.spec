@@ -1,5 +1,5 @@
-%define version 2.22.0
-%define release %mkrel 2
+%define version 2.23.1
+%define release %mkrel 1
 
 %define libgnomecanvas_version 2.6.0
 %define gtkmm_version 2.4.0
@@ -16,7 +16,7 @@ Name:	 	%{pkgname}%{api_version}
 Summary: 	A C++ interface for GNOME 2 canvas library
 Version: 	%{version}
 Release: 	%{release}
-License: 	LGPL
+License: 	LGPLv2+
 Group:   	System/Libraries
 URL:     	http://gtkmm.sourceforge.net/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
