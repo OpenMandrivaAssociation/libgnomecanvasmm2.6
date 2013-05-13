@@ -23,7 +23,7 @@ URL:     	http://gtkmm.sourceforge.net/
 Source:		http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.bz2
 
 BuildRequires:	gtkmm2.4-devel >= %{gtkmm_version}
-BuildRequires:	libgnomecanvas2-devel >= %{libgnomecanvas_version}
+BuildRequires:	pkgconfig(libgnomecanvas-2.0) >= %{libgnomecanvas_version}
 BuildRequires:	doxygen
 
 %description
