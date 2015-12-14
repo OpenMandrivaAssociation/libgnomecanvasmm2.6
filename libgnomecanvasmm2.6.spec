@@ -1,4 +1,5 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
+%define _disable_lto 1
 
 %define api	2.6
 %define major	1
@@ -59,6 +60,7 @@ This package provides API documentation of %{pkgname} library.
 %setup -qn %{pkgname}-%{version}
 
 %build
+export CXXFLAGS="%{optflags} -std=gnu++11"
 %configure2_5x --disable-static
 %make 
 
