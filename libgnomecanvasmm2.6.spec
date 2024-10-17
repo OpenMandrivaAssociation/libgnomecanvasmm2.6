@@ -13,7 +13,7 @@ Version: 	2.26.0
 Release: 	19
 License: 	LGPLv2+
 Group:   	System/Libraries
-Url:     	http://gtkmm.sourceforge.net/
+Url:     	https://gtkmm.sourceforge.net/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnomecanvasmm/%{url_ver}/%{pkgname}-%{version}.tar.bz2
 
 BuildRequires:	doxygen
