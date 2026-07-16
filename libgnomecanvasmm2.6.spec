@@ -10,7 +10,7 @@
 Summary: 	A C++ interface for GNOME 2 canvas library
 Name:	 	%{pkgname}%{api}
 Version: 	2.26.0
-Release: 	19
+Release: 	20
 License: 	LGPLv2+
 Group:   	System/Libraries
 Url:     	https://gtkmm.sourceforge.net/
